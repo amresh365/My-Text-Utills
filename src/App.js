@@ -1,20 +1,13 @@
+import { useState } from "react";
 import "./App.css";
 import Main from "./My Component/Main";
-import { useState } from "react";
-import navbar from "./My Component/navbar";
-import body from "./My Component/body";
+import Nav from "./My Component/Nav";
 
 function App() {
   return (
     <>
-      <body />
-      <navbar />
-      <Main />
-      <div className="container">
-        <button className="btn" onClick={""}>
-          click
-        </button>
-      </div>
+      <Nav title={"UpperCase Converter"} />
+      <Main head={"Enter The Text"} />
     </>
   );
 }
