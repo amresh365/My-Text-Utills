@@ -1,16 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./My Component/Header";
 import Main from "./My Component/Main";
 import { useState } from "react";
+import navbar from "./My Component/navbar";
+import body from "./My Component/body";
+
 function App() {
-  const [userA, setfirst] = useState("amresh");
-  const [secondName, setsecond] = useState("gupta");
   return (
     <>
-      <Header />
-      <Main userP={userA} userq={secondName} />
-      <div className="">Amresh</div>
+      <body />
+      <navbar />
+      <Main />
+      <div className="container">
+        <button className="btn" onClick={""}>
+          click
+        </button>
+      </div>
     </>
   );
 }
