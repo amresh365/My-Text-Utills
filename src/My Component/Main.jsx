@@ -23,6 +23,9 @@ const Main = (props) => {
 
   const handleOnChange = (event) => {
     setText(event.target.value);
+    if (text === "Please Enter Text") {
+      setText("");
+    }
   };
 
   const handleOnClickedCopy = () => {
@@ -33,7 +36,7 @@ const Main = (props) => {
   };
 
   return (
-    <div className="container">
+    <div className="container ">
       <textarea
         type="text"
         className={`form-control my-5 bg-${
@@ -56,19 +59,23 @@ const Main = (props) => {
         Copy Text
       </button>
 
+      <button className="btn btn-primary m-1" onClick={handleOnClickedCopy}>
+        Remove Xspace
+      </button>
+
       <div
         className={`section-Part text-${
           props.mode === "light" ? "black" : "light"
         }`}
       >
         <div>
-          <h1>Text Summry</h1>
-          <p>
+          <h1 className="font-italic textSummry">Text Summry</h1>
+          <p className="para">
             The Lenght of text {text.length} number of word in the text{" "}
-            {text.split(" ").length}
+            {text.split(" ").length - 1}
           </p>
-          <h2>Preview</h2>
-          <p>{text}</p>
+          <h2 className="preview">Preview</h2>
+          <p className="para">{text}</p>
         </div>
       </div>
     </div>

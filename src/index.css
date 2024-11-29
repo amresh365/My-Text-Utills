@@ -14,3 +14,18 @@ code {
 .form-check-input {
   cursor: pointer;
 }
+
+.textSummry {
+  font-family: serif;
+}
+
+.preview {
+  font-family: serif;
+}
+.para {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.textarea {
+  font-family: "Courier New", Courier, monospace;
+}

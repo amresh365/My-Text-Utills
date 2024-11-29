@@ -1,6 +1,5 @@
 import Main from "./My Component/Main";
 import Nav from "./My Component/Nav";
-import About from "./My Component/About";
 import Alert from "./My Component/Alert";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -30,17 +29,9 @@ function App() {
     <>
       <Nav title={"Text Utils"} mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} mode={mode} />
-
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Main head={"Enter The Text"} showAlert={showAlert} mode={mode} />
-          }
-        />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Main showAlert={showAlert} mode={mode} />} />
       </Routes>
-
       {/* <About /> */}
     </>
   );
